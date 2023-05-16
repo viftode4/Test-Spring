@@ -1,4 +1,4 @@
-package com.test.spring.user;
+package com.test.spring.data;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,9 +20,6 @@ import java.util.List;
 @AllArgsConstructor
 public class User implements UserDetails {
     @Id
-    @GeneratedValue
-    private Integer id;
-
     private String username;
     private String password;
     private String email;
