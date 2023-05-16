@@ -20,7 +20,7 @@ public class ArticleService {
     public ArticleResponse getAll() {
         String role = SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream().findFirst().get().toString();
         String response = null;
-        
+
         if(role.equals("ADMIN")) {
             response = articleRepository.findAll().toString();
         } else if(role.equals("USER")) {
